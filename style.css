@@ -84,7 +84,79 @@
   top: 30px;
   left: 400px;
   width: 700px;
-  height: 400px;
+  height: auto;
   background-color: #F2F2F2;
+
+  font-family: Roboto, sans-serif;
+  
+  display: grid;
+  grid-template:
+    'user . time'
+    'title title title'
+    'body body body'
+    'comments comments comments'
+    'user-comment user-comment user-comment';
+}
+
+.post .user {
+  grid-area: user;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.post .time {
+  grid-area: time;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.post .title {
+  grid-area: title;
+  font-size: 3.5vh;
+  font-weight: 600;
+  padding: 15px 10px;
+}
+.post .body {
+  grid-area: body;
+  padding: 10px 10px;
+  font-size: 2.5vh;
+}
+.post .comments-wrap {
+  grid-area: comments;
+  padding: 15px 10px;
+}
+
+.post .comments-heading {
+  font-weight: 600;
+  font-size: 2.5vh; 
+  padding-bottom: 10px;
+}
+
+.comment .comment-user {
+  display: inline-block;
+  font-weight: 600;
+}
+.comment .comment-body {
   display: inline-block;
 }
+
+.user-comment-wrap {
+  grid-area: user-comment;
+  padding: 10px 10px;
+}
+.user-comment-box {
+  display:inline-block;
+  width: 75%;
+  border: 1px solid #B4B4B4;
+  border-radius: 8px;
+  font-size: 2.5vh;
+  padding: 5px;
+  outline: none;
+}
+.user-comment-sendbtn {
+  display:inline-block;
+  width: 15%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
