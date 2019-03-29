@@ -8,6 +8,9 @@
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
 
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
   </head>
@@ -48,26 +51,22 @@
     </div>
 
     <div class="post">
-        <div class="time">Today 14:05</div>
+        <div class="close"></div>
         <div class="title">New Idea for DONUT</div>
         <div class="body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-        <div class="user">svr8</div>
+        <div class="post-details">
+          <div class="username">svr8</div>
+          <div class="timedetails">Today 14:05</div>
+        </div>
         
         <div class="comments-wrap">
           <div class="comments-heading">Comments</div>
           <div class="comments-list">
-            <div class="comment">
-              <div class="comment-user">user1</div>
-              <div class="comment-body">Lorem Ipsum is simply dummy text of the printing and t</div>
+            <div class="comment" v-for="comment in comment_list">
+              <div class="comment-username">{{ comment.username }}</div>
+              <div class="comment-body">{{ comment.body }}</div>
             </div>
-            <div class="comment">
-              <div class="comment-user">user1</div>
-              <div class="comment-body">Lorem Ipsum is simply dummy text of the printing and t</div>
-            </div>
-            <div class="comment">
-              <div class="comment-user">user1</div>
-              <div class="comment-body">Lorem Ipsum is simply dummy text of the printing and t</div>
-            </div>
+            
           </div>
         </div>
 
@@ -79,6 +78,7 @@
     </div>
   </div>
     
+  <script src="script.js"></script>
 
   </body>
 </html>

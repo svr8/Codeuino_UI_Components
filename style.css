@@ -1,19 +1,31 @@
+body {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #919191;
+}
 .container {
   position: relative;
   top: 0px;
   left: 0px;
-  height: 520px;
-  background-color: #919191;
+  height: 99%;
+  margin: 0px;
+  padding: 0px;
 }
 .column {
   position: relative;
   top: 30px;
   left: 30px;
 
-  width: 300px;
+  width: 275px;
   height: auto;
   background-color: #FAFAFA;
   display: inline-block;
+
+  border-radius: 8px;
 
 }
 .column-title {
@@ -81,25 +93,52 @@
 
 .post {
   position: absolute;
-  top: 30px;
-  left: 400px;
+  top: -5px;
+  right: 20px;
   width: 700px;
-  height: auto;
+  height: 100%;
   background-color: #F2F2F2;
 
   font-family: Roboto, sans-serif;
   
   display: grid;
   grid-template:
-    'user . time'
+    'post-details . close'
     'title title title'
     'body body body'
     'comments comments comments'
     'user-comment user-comment user-comment';
 }
+/* Following Code for Close Button has been modified from https://codepen.io/brissmyr/pen/egidw */
+.close {
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
 
-.post .user {
-  grid-area: user;
+  grid-area: close;
+}
+.close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.close:before, .close:after {
+  position: absolute;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+/* ----------------------------------------------------------------------------------- */
+
+.post .post-details {
+  grid-area: post-details;
   padding-left: 10px;
   padding-top: 10px;
 }
@@ -130,7 +169,17 @@
   padding-bottom: 10px;
 }
 
-.comment .comment-user {
+.post .comments-list {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.post .comments-list .comment {
+  margin: 10px;
+}
+
+.comment .comment-username {
+  margin-left: 30px;
   display: inline-block;
   font-weight: 600;
 }
@@ -140,7 +189,7 @@
 
 .user-comment-wrap {
   grid-area: user-comment;
-  padding: 10px 10px;
+  padding: 0px 10px 10px 10px;
 }
 .user-comment-box {
   display:inline-block;
