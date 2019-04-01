@@ -15,6 +15,6 @@ var vue = new Vue({
       { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
       { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'}
     ],
-    show_target: 'comments'
+    show_target: 'body'
   },
 });
