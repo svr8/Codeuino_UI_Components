@@ -1,5 +1,5 @@
 var vue = new Vue({
-  el: ".comments-list",
+  el: ".post",
   data: {
     comment_list: [
       { username: 'user1', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
@@ -11,6 +11,10 @@ var vue = new Vue({
       { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
       { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
       { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
-    ]
-  }
-})
+      { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
+      { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'},
+      { username: 'codeuino', body: 'Lorem Ipsum is simply dummy text of the printing and t'}
+    ],
+    show_target: 'comments'
+  },
+});
