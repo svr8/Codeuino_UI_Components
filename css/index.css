@@ -54,7 +54,6 @@ body {
   position: relative;
   top: 30px;
   left: 90px;
-
   width: 265px;
   max-height: 500px;
   background-color: rgb(19, 79, 109);
@@ -76,7 +75,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 3vh;
   color: white;
-  /* border-bottom: 2px solid black; */
   margin-bottom: 5px;
 }
 .card {
